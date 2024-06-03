@@ -5,14 +5,14 @@
  */
 
 import React from "react";
-
+import Education from "./Components/Education";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Portfolio from "./Components/Portfolio";
 
-import "./styles.css";
+// import "./styles.css";
 
 /**
  * This object represents your information. The project is set so that you
@@ -24,15 +24,13 @@ import "./styles.css";
  * If you don't have one of the social sites listed, leave it as an empty string.
  */
 const siteProps = {
-  name: "Alexandrie Grenier",
-  title: "Web Designer & Content Creator",
-  email: "alex@example.com",
-  gitHub: "microsoft",
-  instagram: "microsoft",
-  linkedIn: "satyanadella",
-  medium: "",
-  twitter: "microsoft",
-  youTube: "Code",
+  name: "Sonali Mohapatra",
+  title: "Software Developer",
+  email: "sonalimw20@gmail.com",
+  gitHub: "https://github.com/SonaliWorkSpace",
+  instagram: "https://www.instagram.com/_sonali_m_ig/",
+  linkedIn:
+    "https://www.linkedin.com/in/sonali-mohapatra-3297182ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 };
 
 const primaryColor = "#4E567E";
@@ -44,6 +42,7 @@ const App = () => {
       <Header />
       <Home name={siteProps.name} title={siteProps.title} />
       <About />
+      <Education />
       <Portfolio />
       <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
     </div>

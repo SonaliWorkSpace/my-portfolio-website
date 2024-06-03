@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable jsx-a11y/alt-text */
 /**
  * Portfolio component
  *
@@ -9,6 +11,7 @@
  */
 
 import React from "react";
+import "../styles.css";
 
 /**
  * Desk image
@@ -19,9 +22,8 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
+import image from "../images/pro3.jpg";
 
-const imageAltText = "desktop with books and laptop";
 
 /**
  * Project list
@@ -31,28 +33,39 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Coffee Website",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "A website where you can order your favourite coffee and even book a table for your friends and family.",
+    url: "https://sonaliworkspace.github.io/Cafe.Pulse/",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Traveling Agency",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "A travelling agency which allows you to book your trips and even arrange the necessary equipments.",
+    url: "https://sonaliworkspace.github.io/Move.pulse/",
   },
   {
-    title: "My Resume Site",
-    description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+    title: "Styling and Venture Agency ",
+    description: "A Styling and Venture Agency showing its brand, team and vision.",
+    url: "https://sonaliworkspace.github.io/Style-Pulse/",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "Rest API Demo Project",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "An application to display the user information (name and email) for each post using Rest API.",
+    url: "https://sonaliworkspace.github.io/REST-API-DEMO/",
+  },
+  {
+    title: "TIC-TAC-TOE",
+    description: "A simple application made by using HTML , CSS and Javascript.",
+    url: "https://sonaliworkspace.github.io/Play-Tic-tac-toe-/",
+  },
+
+  {
+    title: "Shopping cart",
+    description:
+      "A simple shopping website which allows you to add items in cart and even delete them.",
+    url: "https://sonaliworkspace.github.io/Shop-Pulse/",
   },
 ];
 
@@ -64,15 +77,19 @@ const Portfolio = () => {
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
           <img
             src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover" }}
-            alt={imageAltText}
+            style={{
+              height: "90%",
+              width: "100%",
+              objectFit: "cover",
+              animation: "1s ease-out 0s 1 slideInLeft",
+            }}
           />
         </div>
         <div className="container">
           {projectList.map((project) => (
             <div className="box" key={project.title}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+                <h3 style={{ flexBasis: "40px"}}>{project.title}</h3>
               </a>
               <p className="small">{project.description}</p>
             </div>

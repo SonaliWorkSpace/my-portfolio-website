@@ -12,6 +12,8 @@ body {
   overflow-x: hidden;
   padding: 0;
   width: 100%;
+  scroll-behavior: smooth; /* add smooth scroll */
+  
 }
 
 div#main {
@@ -44,16 +46,46 @@ section img.background {
   width: 100vmax;
   z-index: -1;
 }
+h1:hover{
+  color: #86d7fa;
+  cursor: pointer;
+}
+h2:hover{
+  color: #86d7fa;
+  cursor: pointer;
+}
 
 h1 {
+  color: rgb(247, 249, 251);
   font-family: "Cormorant Garamond", serif;
   font-size: 7rem;
   font-weight: 400;
   line-height: 0.8;
   margin: 0;
 }
+ #about h2{
+  color: rgb(255, 255, 255);
+ }
 
+ #about h2:hover{
+  color: #86d7fa;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+ #about{
+  color: aliceblue;
+ }
+
+ .large p{
+  color: aliceblue;
+ }
+
+ #aboutme ul {
+  color: aliceblue;
+ }
 h2 {
+  color: rgb(248, 248, 248);
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
@@ -90,16 +122,18 @@ li {
 }
 
 li::marker {
-  color: #4e567e;
+  color: #fefefe;
 }
 
 a {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
 a:hover {
-  color: #4e567e;
+  color: #5436dc;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .container {
@@ -111,7 +145,7 @@ a:hover {
 
 .container .box {
   border-radius: 10px;
-  border: 1px solid rgb(204, 204, 204);
+  border: 1px solid rgba(248, 238, 238, 0.616);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -122,4 +156,130 @@ a:hover {
 img.socialIcon {
   height: 30px;
   width: 30px;
+}
+
+#portfolio h2:hover{
+  color: #86d7fa;
+  cursor: pointer;
+ 
+}
+
+#portfolio{
+  background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255);
+}
+#portfolio h3{
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+#portfolio h3:hover{
+  color: #a285ec;
+  text-decoration: underline;
+}
+
+#portfolio .container .box:hover{
+ color: rgb(227, 223, 223);
+ font-weight: 700;
+ background-color: rgba(87, 102, 168, 0.358);
+}
+
+/* add a slide In Left animation */
+
+@keyframes slideInLeft {
+  0% {
+    Composite: translateX(-100%);
+  }
+  100% {
+   Composite: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    Composite: translateY(0);
+  }
+  40% {
+    Composite: translateY(-20px);
+  }
+  60% {
+    Composite: translateY(-10px);
+  }
+}
+
+.bounce-arrow {
+  cursor: pointer;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  animation: bounce 2s infinite;
+}
+
+#education {
+  background-image: url("./images/edu1.jpg");
+  padding: 2em 0;
+  /* background-color: #f9f9f9; */
+  text-align: center;
+  background-size: cover; /* Optional: Ensures the background image covers the entire element */
+  background-position: center; /* Optional: Centers the background image */
+}
+
+
+#education h2 {
+  margin-bottom: 1em;
+  font-size: 2em;
+  color: #ffffff;
+}
+
+#education h2:hover{
+  color: #86d7fa;
+  cursor: pointer;
+  
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.education-item {
+  background-color: #4720c65b;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Adjust width as needed */
+  max-width: 500px; /* Optional: Set a max-width */
+}
+
+.education-item:hover{
+  background-color: #000000;
+  color: white;
+}
+.education-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.education-item h4 {
+  margin: 0.5em 0;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.education-item p {
+  margin: 0.5em 0;
+  color: #ffffff;
+}
+
+.education-image {
+  margin-top: 1.5em;
+}
+
+.education-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners */
 }
